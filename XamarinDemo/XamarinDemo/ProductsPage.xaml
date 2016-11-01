@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinDemo.ProductsPage">
+
+  <ListView x:Name="ProductsListView"
+            HasUnevenRows="True"
+            ItemTapped="Products_ItemTapped">
+    <ListView.ItemTemplate>
+      <DataTemplate>
+        <ViewCell>
+          <StackLayout Orientation="Vertical">
+            <Label Text="{Binding Name}"
+                   FontSize="30"
+                   TextColor="Green"/>
+            <Label Text="{Binding Price}"
+                   FontSize="30"/>
+            <Image Source="{Binding ImageUrl}"
+                   WidthRequest="60"
+                   HeightRequest="60"/>
+          </StackLayout>
+        </ViewCell>
+      </DataTemplate>
+    </ListView.ItemTemplate>
+  </ListView>
+
+</ContentPage>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinDemo.ProductDetailsPage">
+
+  <StackLayout Spacing="20">
+    <Label Text="Product Details"
+           FontSize="40"
+           TextColor="Teal"/>
+    <Label x:Name="ProductNameLabel"
+           FontSize="40"/>
+    <Label x:Name="ProductPriceLabel"
+           FontSize="40"/>
+    <Image x:Name="ProductImage"
+           />
+  </StackLayout>
+</ContentPage>

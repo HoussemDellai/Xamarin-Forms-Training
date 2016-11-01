@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinDemo.MenuPage"> 
+
+  <MasterDetailPage.Master>
+    <ContentPage Title="Menu">
+      <StackLayout Spacing="20">
+        <Button Text="First Button"
+                BackgroundColor="Navy"
+                FontSize="30"
+                TextColor="White"
+                Clicked="Button_Clicked"/>
+        <Button Text="Second Button"
+                BackgroundColor="Maroon"
+                FontSize="30"
+                TextColor="White"/>
+        <Button Text="Third Button"
+                BackgroundColor="Olive"
+                FontSize="30"
+                TextColor="White"/>
+      </StackLayout>
+    </ContentPage>
+  </MasterDetailPage.Master>
+  <MasterDetailPage.Detail>
+    <ContentPage>
+      <Label Text="Content Page"
+             FontSize="40"/>
+    </ContentPage>
+  </MasterDetailPage.Detail>
+</MasterDetailPage>

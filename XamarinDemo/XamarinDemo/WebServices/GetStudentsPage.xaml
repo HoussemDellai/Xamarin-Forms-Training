@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinDemo.WebServices.GetStudentsPage">
+
+  <StackLayout>
+    
+    <Button Text="Add Student"
+            TextColor="White"
+            BackgroundColor="Green"
+            FontSize="30"
+            Clicked="GoToAddStudent_Clicked"/>
+    
+    <ListView x:Name="StudentsListView"
+              HasUnevenRows="True"
+              ItemTapped="GoToUpdateOrDelete_ItemTapped">
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell>
+            <StackLayout Margin="20">
+              <Label Text="{Binding Id}"
+                     FontSize="22"/>
+              <Label Text="{Binding Fullname}"
+                     FontSize="30"
+                     TextColor="Navy"/>
+              <Label Text="{Binding Department}"
+                     FontSize="30"
+                     TextColor="Maroon"/>
+            </StackLayout>
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+    
+  </StackLayout>
+
+</ContentPage>

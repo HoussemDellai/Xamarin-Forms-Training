@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinDemo.StylesPage">
+
+  <ContentPage.Resources>
+    <ResourceDictionary>
+      <Style x:Key="BlueLabelStyle"
+             TargetType="Label">
+        <Setter Property="TextColor"
+                Value="Navy" />
+        <Setter Property="FontSize"
+                Value="40"/>
+      </Style>
+    </ResourceDictionary>
+  </ContentPage.Resources>
+
+  <StackLayout Orientation="Vertical">
+    <Label Text="Styles in XAML"/>
+    <Label Text="First Label"
+           Style="{StaticResource BlueLabelStyle}"/>
+    <Label Text="Second Label"
+           Style="{StaticResource BlueLabelStyle}"/>
+    <Label Text="Third Label"
+           Style="{StaticResource BlueLabelStyle}"/>
+  </StackLayout>
+
+</ContentPage>

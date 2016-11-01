@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinDemo.WebServices.AddStudentPage">
+  
+  <StackLayout Spacing="20"
+               Margin="20,80">
+    <Entry x:Name="FullnameEntry"
+           FontSize="30"
+           Placeholder="Fullname"/>
+    <Entry x:Name="DepartmentEntry"
+           FontSize="30"
+           Placeholder="Department"/>
+    <Button Text="Add Student"
+            FontSize="30"
+            TextColor="White"
+            BackgroundColor="Teal"
+            Clicked="AddStudent_Clicked"/>
+  </StackLayout>
+  
+</ContentPage>

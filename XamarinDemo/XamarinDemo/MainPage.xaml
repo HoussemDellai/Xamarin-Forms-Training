@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+  xmlns="http://xamarin.com/schemas/2014/forms"
+  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+  x:Class="XamarinDemo.MainPage">
+
+  <StackLayout x:Name="MainStackLayout"
+               Orientation="Vertical">
+    <Label x:Name="TitleLabel"
+           FontSize="40"
+           TextColor="Green" />
+    <Entry x:Name="NameLabel"
+           FontSize="50"
+           TextColor="Maroon"
+           Placeholder="name"/>
+    <Picker x:Name="ProfessionPicker" />
+    <DatePicker x:Name="BirthdayDatePicker"
+                Date="04/06/1985"
+                MinimumDate="04/06/1985"
+                MaximumDate="04/06/2020"/>
+    <Button Text="Say Hello"
+            TextColor="White"
+            BackgroundColor="Green"
+            FontSize="50"
+            Clicked="SayHello_Clicked"/>
+    <Label x:Name="HelloLabel"
+           FontSize="50"
+           Text="Hello">
+      <Label.TextColor>
+        <OnPlatform x:TypeArguments="Color"
+                    Android="Green"
+                    WinPhone="Blue"
+                    iOS="Red"/>
+      </Label.TextColor>
+    </Label>
+  </StackLayout>
+
+</ContentPage>
