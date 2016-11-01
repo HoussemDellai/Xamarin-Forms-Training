@@ -21,7 +21,6 @@ namespace XamarinDemo.WebServices
             _student = student;
             FullnameEntry.Text = student.Fullname;
             DepartmentEntry.Text = student.Department;
-
         }
 
         private async void EditStudent_Clicked(object sender, EventArgs e)
