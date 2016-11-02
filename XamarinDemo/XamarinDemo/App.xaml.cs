@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 
 using Xamarin.Forms;
+using XamarinDemo.MVVM;
 using XamarinDemo.TabbedPage;
 using XamarinDemo.WebServices;
 
@@ -15,7 +16,9 @@ namespace XamarinDemo
         {
             InitializeComponent();
 
-            MainPage = new GetStudentsPage();
+            MainPage = new MvvmPersonPage();
+            //MainPage = new NonMvvmPersonPage();
+            //MainPage = new GetStudentsPage();
             //MainPage = new Xamarin.Forms.TabbedPage
             //{
             //    Children =

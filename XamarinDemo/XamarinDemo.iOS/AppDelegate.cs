@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 using Foundation;
+using HockeyApp.iOS;
 using UIKit;
 
 namespace XamarinDemo.iOS
@@ -13,6 +14,7 @@ namespace XamarinDemo.iOS
     [Register("AppDelegate")]
     public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate
     {
+        private string AppId = "e21fe78cf64a4eedb261b257151c55fd";
         //
         // This method is invoked when the application has loaded and is ready to run. In this 
         // method you should instantiate the window, load the UI into it and then make the window
@@ -22,6 +24,11 @@ namespace XamarinDemo.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
+            var manager = BITHockeyManager.SharedHockeyManager;
+            manager.Configure(AppId);
+            manager.StartManager();
+            manager.Authenticator.AuthenticateInstallation(); // This line is obsolete in crash only builds
+
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
 
